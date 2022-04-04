@@ -14,8 +14,9 @@ app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 
 app.set("views", "./views");
-// Routes
 
+app.use(express.static('public'));
+// Routes
 
 app.get('/', 
   (req, res) => {
