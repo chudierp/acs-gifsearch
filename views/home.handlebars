@@ -2,4 +2,15 @@
 
 <!-- hello-gif.handlebars -->
 
-<!-- show a gif passed from the route -->
+<!-- add a form -->
+<form action="/" method="GET">
+  <input type="text" name="term">
+  <button type="submit">search</button>
+</form>
+
+{{#each gifs}}
+  <div class="tenor-gif-embed" data-postid="{{this.id}}" data-share-method="host" data-width="300px" data-height="300px">
+    <a href="{{this.url}}"></a>
+  </div>
+  <script type="text/javascript" src="https://tenor.com/embed.js"></script>
+{{/each}}
